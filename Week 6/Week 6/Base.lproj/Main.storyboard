@@ -34,10 +34,6 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Save"/>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9QT-9F-eTA">
-                                <rect key="frame" x="76" y="336" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V0B-sm-WC4">
                                 <rect key="frame" x="259" y="612" width="108" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -56,15 +52,21 @@
                                     <action selector="uploadPhotoClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FDJ-5A-G2j"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ici-zz-sEk">
+                                <rect key="frame" x="76" y="323" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="EMY-p8-uwg"/>
                     <connections>
-                        <outlet property="ImgUser" destination="9QT-9F-eTA" id="r8l-RY-AKS"/>
+                        <outlet property="emailText" destination="Vuq-eT-Z3y" id="mvD-3Y-ab0"/>
+                        <outlet property="nameText" destination="y4o-Je-wP7" id="t73-NP-phv"/>
                         <outlet property="txtEmail" destination="Vuq-eT-Z3y" id="wNC-Zc-P68"/>
                         <outlet property="txtName" destination="y4o-Je-wP7" id="j8j-4Q-Eg0"/>
+                        <outlet property="userImage" destination="Ici-zz-sEk" id="1Vf-x2-jJY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
