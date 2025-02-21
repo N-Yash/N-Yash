@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Week 6
+//  week6
 //
-//  Created by Yash Vipul Naik on 2025-02-14.
+//  Created by Rania Arbash on 2025-02-14.
 //
 
 import UIKit

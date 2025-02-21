@@ -41,7 +41,7 @@ class ViewController: UIViewController ,
     }
     
     
-    func imagePickerController(_ picker: UIImagePickerController,
+    func imagePickerController(_ picker: UIImagePickerController, 
                                didFinishPickingMediaWithInfo info:
     [UIImagePickerController.InfoKey : Any]){
         print("image selected")
@@ -70,7 +70,7 @@ class ViewController: UIViewController ,
                 alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                     
-                    let newStd = Student(name: name, email: email, imageData: self.selectedImageData)
+                    var newStd = Student(name: name, email: email, imageData: self.selectedImageData)
                     self.model?.addNewStudent(newStd: newStd)
                     self.selectedImageData = UIImage(named: "img")?.pngData()
                    
@@ -99,3 +99,4 @@ class ViewController: UIViewController ,
     
 
 }
+

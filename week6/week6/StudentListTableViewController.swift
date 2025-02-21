@@ -22,16 +22,16 @@ class StudentListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (model?.studentList.count)!
+        return (model?.studentsList.count)!
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.text = model?.studentList[indexPath.row].name
-        cell.detailTextLabel?.text = model?.studentList[indexPath.row].email
-        cell.imageView?.image = UIImage(data: (model?.studentList[indexPath.row].imageData!)!)
+        cell.textLabel?.text = model?.studentsList[indexPath.row].name
+        cell.detailTextLabel?.text = model?.studentsList[indexPath.row].email
+        cell.imageView?.image = UIImage(data: (model?.studentsList[indexPath.row].imageData!)!)
         
         return cell
     }
@@ -53,7 +53,7 @@ class StudentListTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }
+        }    
     }
     */
 

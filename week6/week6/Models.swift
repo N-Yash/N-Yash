@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Student{
-    var id: UUID = UUID()
-    var name : String = ""
+class Student {
+    var id : UUID = UUID()
+    var name: String = ""
     var email : String = ""
     var imageData : Data?
     
@@ -21,15 +21,20 @@ class Student{
 }
 
 class StudentManager {
-    var studentList : [Student] = []
     
-    func addNewStudent(newStd : Student){
-        studentList.append(newStd)
+    var studentsList : [Student] = []
+    
+    
+    func addNewStudent(newStd: Student) {
+        studentsList.append(newStd)
     }
     
-    func deleteOneStudent(idToDelete : UUID){
-        studentList.removeAll{ student in
-            return student.id == idToDelete
+    func deleteOneStudent(idtodelete: UUID)  {
+        studentsList.removeAll { student in
+            return student.id == idtodelete
         }
     }
+    
 }
+
+
