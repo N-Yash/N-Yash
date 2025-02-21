@@ -1,14 +1,14 @@
 //
-//  Assignment_2Tests.swift
-//  Assignment 2Tests
+//  AssignmentTests.swift
+//  AssignmentTests
 //
-//  Created by Yash Vipul Naik on 2025-02-14.
+//  Created by Yash Vipul Naik on 2025-02-21.
 //
 
 import XCTest
-@testable import Assignment_2
+@testable import Assignment
 
-final class Assignment_2Tests: XCTestCase {
+final class AssignmentTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

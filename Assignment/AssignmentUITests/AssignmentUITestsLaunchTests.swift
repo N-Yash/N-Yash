@@ -1,13 +1,13 @@
 //
-//  Assignment_2UITestsLaunchTests.swift
-//  Assignment 2UITests
+//  AssignmentUITestsLaunchTests.swift
+//  AssignmentUITests
 //
-//  Created by Yash Vipul Naik on 2025-02-14.
+//  Created by Yash Vipul Naik on 2025-02-21.
 //
 
 import XCTest
 
-final class Assignment_2UITestsLaunchTests: XCTestCase {
+final class AssignmentUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
