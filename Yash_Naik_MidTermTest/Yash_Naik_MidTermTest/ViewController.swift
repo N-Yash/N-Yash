@@ -30,6 +30,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let newItemObejct = Item(name: newItem, isNecessary: isNecessary.isOn)
             items.append(newItemObejct)
             newItemTextField.text = ""
+            isNecessary.isOn = false
             tableView.reloadData()
             let alert = UIAlertController(title: "Item Added", message: "Name: \(newItem)", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default))
