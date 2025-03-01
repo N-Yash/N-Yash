@@ -5,7 +5,7 @@ class HistoryTableViewController: UITableViewController {
     var model: ProductManager?
     override func viewDidLoad() {
         super.viewDidLoad()
-        model = ((UIApplication.shared.delegate) as! AppDelegate).myModel
+        model = ((UIApplication.shared.delegate) as! AppDelegate).model
     }
 
     // MARK: - Table view data source

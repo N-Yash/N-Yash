@@ -17,7 +17,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         quantityIB.text = ""
-        model = ((UIApplication.shared.delegate) as! AppDelegate).myModel
+        model = ((UIApplication.shared.delegate) as! AppDelegate).model
         productTable.dataSource = self
         productTable.delegate = self
     }
@@ -47,7 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             Total.text! = String((quantity * price))
         }
         else{
-            let alert = UIAlertController(title: "Alert", message: "Please Select Type of Product", preferredStyle: .alert)
+            let alert = UIAlertController(title: "Product is not selected", message: "Select Product to continue", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default))
             present(alert, animated: false)
             
@@ -73,7 +73,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func onBuy(_ sender: UIButton) {
         
         
-        if let id = selectedProductID {
+        if selectedProductID != nil {
             if quantityIB.text?.count ?? 0 > 0 {
                 let amount = Int(quantityIB.text!)
                 if ((model?.isAvaliable(productID: selectedProductID!, quatity: amount!))!) {

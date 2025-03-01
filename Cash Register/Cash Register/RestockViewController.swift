@@ -6,7 +6,7 @@ class RestockViewController: UIViewController, UITableViewDelegate, UITableViewD
     var model: ProductManager?
     override func viewDidLoad() {
         super.viewDidLoad()
-        model = ((UIApplication.shared.delegate) as! AppDelegate).myModel
+        model = ((UIApplication.shared.delegate) as! AppDelegate).model
         restockTable.dataSource = self
         restockTable.delegate = self
         // Do any additional setup after loading the view.
@@ -20,9 +20,10 @@ class RestockViewController: UIViewController, UITableViewDelegate, UITableViewD
         if let index = restockTable.indexPathForSelectedRow?.row
         {
             if let stock:Int = Int(amountIB.text ?? ""){
-                let localModel =  model!
-                localModel.updateQuantity(productID: localModel.productList[index].id, newQuatity: localModel.productList[index].quantity + stock)
+                let myModel =  model!
+                myModel.updateQuantity(productID: myModel.productList[index].id, newQuatity: myModel.productList[index].quantity + stock)
                 restockTable.reloadData()
+                amountIB.text = ""
             } else {
                 let alert = UIAlertController(title: "Alert", message: "Invalid Restock Amount", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default))
