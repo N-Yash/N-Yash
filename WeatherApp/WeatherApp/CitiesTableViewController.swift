@@ -2,44 +2,66 @@
 //  CitiesTableViewController.swift
 //  WeatherApp
 //
-//  Created by Yash Vipul Naik on 2025-03-21.
+//  Created by Rania Arbash on 2025-03-14.
 //
 
 import UIKit
 
-class CitiesTableViewController: UITableViewController {
+class CitiesTableViewController: UITableViewController, UISearchBarDelegate, NetworkingDelegate {
+   
+    
+    
+    @IBOutlet var searchBar: UITableView!
+    var listOfCites = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        searchBar.delegate = self
+    
+        
+        NetworkingManager.shared.networkingDelegate = self
     }
 
     // MARK: - Table view data source
 
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String){
+        print(searchText)
+        if searchText.isEmpty {
+            listOfCites = []
+            tableView.reloadData()
+        }
+        if searchText.count > 2 {
+            NetworkingManager.shared.getAllCitiesFromAPI(searchTerm: searchText)
+
+            //
+        }
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return listOfCites.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        // Configure the cell...
-
+        cell.textLabel?.text = listOfCites[indexPath.row]
         return cell
     }
-    */
+    func networkingDidFinishWithResult(list: [String]) {
+        listOfCites = list
+        tableView.reloadData()
+    }
+    
+    func networkingDidFail() {
+        listOfCites = []
+        tableView.reloadData()
+    }
+
 
     /*
     // Override to support conditional editing of the table view.
@@ -76,14 +98,14 @@ class CitiesTableViewController: UITableViewController {
     }
     */
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+       var WVC =   segue.destination as! WeatherViewController
+        WVC.selectedCity =  listOfCites[(tableView.indexPathForSelectedRow?.row)!]
     }
-    */
+   
 
 }

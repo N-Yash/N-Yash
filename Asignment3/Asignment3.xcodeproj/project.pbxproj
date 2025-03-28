@@ -16,10 +16,15 @@
 		8B9374A62D8DE1A200B5EECA /* Asignment3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374A52D8DE1A200B5EECA /* Asignment3Tests.swift */; };
 		8B9374B02D8DE1A200B5EECA /* Asignment3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374AF2D8DE1A200B5EECA /* Asignment3UITests.swift */; };
 		8B9374B22D8DE1A200B5EECA /* Asignment3UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374B12D8DE1A200B5EECA /* Asignment3UITestsLaunchTests.swift */; };
-		8B9374BF2D8DE5A300B5EECA /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374BE2D8DE5A300B5EECA /* QuestionModel.swift */; };
+		8B9374BF2D8DE5A300B5EECA /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374BE2D8DE5A300B5EECA /* QuizModel.swift */; };
 		8B9374C32D8DEB8500B5EECA /* QuestionListTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374C22D8DEB8500B5EECA /* QuestionListTableTableViewController.swift */; };
 		8B9374C52D8DF28F00B5EECA /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374C42D8DF28F00B5EECA /* AddQuestionViewController.swift */; };
 		8B9374C72D8E11E800B5EECA /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9374C62D8E11E800B5EECA /* CustomCellTableViewCell.swift */; };
+		8BFB6EC72D972CFF001FC548 /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB6EC62D972CFF001FC548 /* QuestionModel.swift */; };
+		8BFB6EC92D972D51001FC548 /* QuestionBankDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB6EC82D972D51001FC548 /* QuestionBankDelegate.swift */; };
+		8BFB6ECB2D972F05001FC548 /* UpdateQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB6ECA2D972F05001FC548 /* UpdateQuestionViewController.swift */; };
+		8BFB6ECD2D97364C001FC548 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB6ECC2D97364C001FC548 /* QuizViewController.swift */; };
+		8BFB6ECF2D973A4E001FC548 /* CustomRadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFB6ECE2D973A4E001FC548 /* CustomRadioButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,10 +58,15 @@
 		8B9374AB2D8DE1A200B5EECA /* Asignment3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Asignment3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B9374AF2D8DE1A200B5EECA /* Asignment3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asignment3UITests.swift; sourceTree = "<group>"; };
 		8B9374B12D8DE1A200B5EECA /* Asignment3UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asignment3UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8B9374BE2D8DE5A300B5EECA /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		8B9374BE2D8DE5A300B5EECA /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 		8B9374C22D8DEB8500B5EECA /* QuestionListTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionListTableTableViewController.swift; sourceTree = "<group>"; };
 		8B9374C42D8DF28F00B5EECA /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
 		8B9374C62D8E11E800B5EECA /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		8BFB6EC62D972CFF001FC548 /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		8BFB6EC82D972D51001FC548 /* QuestionBankDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionBankDelegate.swift; sourceTree = "<group>"; };
+		8BFB6ECA2D972F05001FC548 /* UpdateQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateQuestionViewController.swift; sourceTree = "<group>"; };
+		8BFB6ECC2D97364C001FC548 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		8BFB6ECE2D973A4E001FC548 /* CustomRadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRadioButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,16 +118,21 @@
 			isa = PBXGroup;
 			children = (
 				8B93748E2D8DE1A000B5EECA /* AppDelegate.swift */,
+				8BFB6ECA2D972F05001FC548 /* UpdateQuestionViewController.swift */,
 				8B9374902D8DE1A000B5EECA /* SceneDelegate.swift */,
 				8B9374922D8DE1A000B5EECA /* ViewController.swift */,
 				8B9374942D8DE1A000B5EECA /* Main.storyboard */,
 				8B9374972D8DE1A200B5EECA /* Assets.xcassets */,
 				8B9374992D8DE1A200B5EECA /* LaunchScreen.storyboard */,
 				8B93749C2D8DE1A200B5EECA /* Info.plist */,
-				8B9374BE2D8DE5A300B5EECA /* QuestionModel.swift */,
+				8B9374BE2D8DE5A300B5EECA /* QuizModel.swift */,
 				8B9374C22D8DEB8500B5EECA /* QuestionListTableTableViewController.swift */,
 				8B9374C42D8DF28F00B5EECA /* AddQuestionViewController.swift */,
 				8B9374C62D8E11E800B5EECA /* CustomCellTableViewCell.swift */,
+				8BFB6EC62D972CFF001FC548 /* QuestionModel.swift */,
+				8BFB6EC82D972D51001FC548 /* QuestionBankDelegate.swift */,
+				8BFB6ECC2D97364C001FC548 /* QuizViewController.swift */,
+				8BFB6ECE2D973A4E001FC548 /* CustomRadioButton.swift */,
 			);
 			path = Asignment3;
 			sourceTree = "<group>";
@@ -270,13 +285,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BFB6ECF2D973A4E001FC548 /* CustomRadioButton.swift in Sources */,
 				8B9374932D8DE1A000B5EECA /* ViewController.swift in Sources */,
 				8B93748F2D8DE1A000B5EECA /* AppDelegate.swift in Sources */,
 				8B9374C52D8DF28F00B5EECA /* AddQuestionViewController.swift in Sources */,
 				8B9374C72D8E11E800B5EECA /* CustomCellTableViewCell.swift in Sources */,
 				8B9374C32D8DEB8500B5EECA /* QuestionListTableTableViewController.swift in Sources */,
+				8BFB6ECB2D972F05001FC548 /* UpdateQuestionViewController.swift in Sources */,
 				8B9374912D8DE1A000B5EECA /* SceneDelegate.swift in Sources */,
-				8B9374BF2D8DE5A300B5EECA /* QuestionModel.swift in Sources */,
+				8BFB6ECD2D97364C001FC548 /* QuizViewController.swift in Sources */,
+				8B9374BF2D8DE5A300B5EECA /* QuizModel.swift in Sources */,
+				8BFB6EC92D972D51001FC548 /* QuestionBankDelegate.swift in Sources */,
+				8BFB6EC72D972CFF001FC548 /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,36 +8,44 @@
 import UIKit
 
 class AddQuestionViewController: UIViewController {
-
-    
     @IBOutlet weak var txtQuestion: UITextField!
     @IBOutlet weak var txtCorrectAnswer: UITextField!
     @IBOutlet weak var txtOption1: UITextField!
     @IBOutlet weak var txtOption2: UITextField!
     @IBOutlet weak var txtOption3: UITextField!
     
-    let quizManager = QuizManager.shared
-    
+    var localModel: Quiz?
     override func viewDidLoad() {
         super.viewDidLoad()
+        localModel = ((UIApplication.shared.delegate) as! AppDelegate).model
+
         // Do any additional setup after loading the view.
     }
     
     @IBAction func btnDoneClicked(_ sender: Any) {
-        if txtQuestion.text == "" && txtOption1.text == "" && txtOption2.text == "" && txtOption3.text == "" && txtCorrectAnswer.text == "" {
-            let alert = UIAlertController(title: "Enter Every Value", message: "Please enter value for each and evry text field.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default,handler: nil))
-            present(alert,animated: true,completion: nil)
+        guard let questionText = txtQuestion.text, !questionText.isEmpty,
+              let correctAnswer = txtCorrectAnswer.text, !correctAnswer.isEmpty,
+              let incorrect1 = txtOption1.text, !incorrect1.isEmpty,
+              let incorrect2 = txtOption2.text, !incorrect2.isEmpty,
+              let incorrect3 = txtOption3.text, !incorrect3.isEmpty 
+        else {
+            showAlert(title: "Missing Information", message: "Please fill in all fields.")
+            return
         }
-        else{
-            quizManager.addQuestion(text: txtQuestion.text ?? "", option: [txtCorrectAnswer.text ?? "", txtOption1.text ?? "", txtOption2.text ?? "", txtOption3.text ?? ""], correctAnswerIndex: 0)
-            self.dismiss(animated: true)
-        }
+        let answers = [incorrect1, incorrect2, incorrect3]
+        let newQuestion = Questions(id: UUID(), text: questionText, answers: correctAnswer, incorrect: answers)
+        localModel?.add(newQuiz: newQuestion)
+        dismiss(animated: true, completion: nil)
     }
     @IBAction func btnCancelClicked(_ sender: Any) {
         self.dismiss(animated: true)
     }
     
+    private func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
     /*
     // MARK: - Navigation
 

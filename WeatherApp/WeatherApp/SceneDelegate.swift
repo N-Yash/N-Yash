@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  WeatherApp
 //
-//  Created by Yash Vipul Naik on 2025-03-14.
+//  Created by Rania Arbash on 2025-03-14.
 //
 
 import UIKit

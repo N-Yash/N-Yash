@@ -7,20 +7,25 @@
 
 import UIKit
 
-class QuestionListTableTableViewController: UITableViewController {
-
-    let quizManager = QuizManager.shared
+class QuestionListTableTableViewController: UITableViewController, QuestionBankDelegate{
+    func didAddQuestion() {
+        questions = localModel?.questions ?? []
+        tableView.reloadData()
+    }
+    
+    func didUpdateQuestion() {
+        questions = localModel?.questions ?? []
+        tableView.reloadData()
+    }
+    
+    var localModel: Quiz?
+    var questions: [Questions] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if quizManager.getAllQuestions().count > 0{
-            tableView.register(CustomCellTableViewCell.self, forCellReuseIdentifier: "cell")
-        }
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        localModel = ((UIApplication.shared.delegate) as! AppDelegate).model
+        questions = localModel?.questions ?? []
+        Quiz.shared.delagate = self
     }
 
     // MARK: - Table view data source
@@ -32,22 +37,19 @@ class QuestionListTableTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        if quizManager.getAllQuestions().count > 0{
-            return quizManager.getAllQuestions().count
-        }
-        return 0
+        return localModel?.questions.count ?? 0
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCellTableViewCell
-        let question = quizManager.getAllQuestions()[indexPath.row]
+        let question = questions[indexPath.row]
+        
         cell.lblQuestion?.text = question.text
-        cell.lblCorrectAnswer?.text = "A. \(question.options[0])"
-        cell.lblOption1?.text = "B. \(question.options[1])"
-        cell.lblOption2?.text = "C. \(question.options[2])"
-        cell.lblOption3?.text = "D. \(question.options[3])"
-
+        cell.lblCorrectAnswer?.text = question.answers
+        cell.lblOption1.text = question.incorrect[0]
+        cell.lblOption2.text = question.incorrect[1]
+        cell.lblOption3.text = question.incorrect[2]
         return cell
     }
     
@@ -90,15 +92,22 @@ class QuestionListTableTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier! == "updateQuestion"{
+            if let UpdateVC = segue.destination as? UpdateQuestionViewController{
+                print("To Update View")
+                let localModel = self.localModel
+                let index  = tableView.indexPathForSelectedRow?.row ?? 0
+                print(localModel?.questions[index])
+                UpdateVC.selectQuestion = localModel?.questions[index]
+                        
+            }
+                    
+        }
     }
-    */
+
 
 }
