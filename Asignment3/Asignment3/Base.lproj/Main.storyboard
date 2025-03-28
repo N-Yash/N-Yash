@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="619-u5-iDm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2507.6335877862593" y="-265.49295774647891"/>
+            <point key="canvasLocation" x="2250" y="-328"/>
         </scene>
         <!--Question Bank-->
         <scene sceneID="qbf-ci-xTw">
@@ -231,7 +231,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Question Bank" id="Log-I5-LgS">
                         <barButtonItem key="rightBarButtonItem" style="plain" changesSelectionAsPrimaryAction="YES" id="wck-EQ-dyn">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DWR-3Q-eQi">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="DWR-3Q-eQi">
                                 <rect key="frame" x="290" y="4.6666666666666679" width="87" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="labelColor"/>

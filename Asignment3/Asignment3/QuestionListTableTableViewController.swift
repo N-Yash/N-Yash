@@ -13,7 +13,6 @@ class QuestionListTableTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        quizManager.addQuestion(text: "What is 3 * 3?", option: ["9", "6", "3", "12"], correctAnswerIndex: 0)
         if quizManager.getAllQuestions().count > 0{
             tableView.register(CustomCellTableViewCell.self, forCellReuseIdentifier: "cell")
         }
@@ -41,15 +40,13 @@ class QuestionListTableTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCellTableViewCell
-        var question = quizManager.getAllQuestions()[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomCellTableViewCell
+        let question = quizManager.getAllQuestions()[indexPath.row]
         cell.lblQuestion?.text = question.text
         cell.lblCorrectAnswer?.text = "A. \(question.options[0])"
         cell.lblOption1?.text = "B. \(question.options[1])"
         cell.lblOption2?.text = "C. \(question.options[2])"
         cell.lblOption3?.text = "D. \(question.options[3])"
-        print(cell.lblQuestion?.text)
-        
 
         return cell
     }
