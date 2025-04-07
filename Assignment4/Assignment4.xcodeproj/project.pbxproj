@@ -17,6 +17,7 @@
 		D3197A472DA3973100351993 /* Assignment4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197A462DA3973100351993 /* Assignment4UITests.swift */; };
 		D3197A492DA3973100351993 /* Assignment4UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197A482DA3973100351993 /* Assignment4UITestsLaunchTests.swift */; };
 		D3197A562DA397BD00351993 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197A552DA397BD00351993 /* NetworkManager.swift */; };
+		D3197A582DA3A71D00351993 /* Jobs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3197A572DA3A71D00351993 /* Jobs.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D3197A462DA3973100351993 /* Assignment4UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment4UITests.swift; sourceTree = "<group>"; };
 		D3197A482DA3973100351993 /* Assignment4UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment4UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D3197A552DA397BD00351993 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		D3197A572DA3A71D00351993 /* Jobs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jobs.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				D3197A302DA3973000351993 /* LaunchScreen.storyboard */,
 				D3197A332DA3973000351993 /* Info.plist */,
 				D3197A552DA397BD00351993 /* NetworkManager.swift */,
+				D3197A572DA3A71D00351993 /* Jobs.swift */,
 			);
 			path = Assignment4;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 			files = (
 				D3197A562DA397BD00351993 /* NetworkManager.swift in Sources */,
 				D3197A2A2DA3971900351993 /* ViewController.swift in Sources */,
+				D3197A582DA3A71D00351993 /* Jobs.swift in Sources */,
 				D3197A262DA3971900351993 /* AppDelegate.swift in Sources */,
 				D3197A282DA3971900351993 /* SceneDelegate.swift in Sources */,
 			);
@@ -443,6 +447,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K32RP3RX34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Assignment4/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -455,7 +460,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = humber.ca.Assignment4;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.humber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -470,6 +475,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = K32RP3RX34;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Assignment4/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -482,7 +488,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = humber.ca.Assignment4;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.humber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

@@ -11,6 +11,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let call = NetworkManager.shared
+        call.fetchJobData()
         // Do any additional setup after loading the view.
     }
 
