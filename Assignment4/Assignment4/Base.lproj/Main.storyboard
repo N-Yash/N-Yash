@@ -143,21 +143,25 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="q4W-uc-Mpo">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="apply" id="q4W-uc-Mpo" customClass="ApplyCustomTableViewCell" customModule="Assignment4" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="50" width="377" height="43.666667938232422"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="q4W-uc-Mpo" id="GGl-d2-dAI">
                                                     <rect key="frame" x="0.0" y="0.0" width="377" height="43.666667938232422"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ot-du-l6M">
-                                                            <rect key="frame" x="151" y="4" width="75" height="35"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLy-Ee-hsR">
+                                                            <rect key="frame" x="165" y="11" width="46" height="23"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                                        </button>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </tableViewCellContentView>
+                                                <connections>
+                                                    <outlet property="applyLinkLable" destination="MLy-Ee-hsR" id="RFC-5n-8Gi"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
@@ -169,6 +173,14 @@
                         <viewLayoutGuide key="safeArea" id="Zzi-Gu-6rd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="applyTableView" destination="3xm-nO-6fr" id="T29-Qr-ZXb"/>
+                        <outlet property="jobCountryLabel" destination="P2A-Mk-k73" id="Usb-0b-faX"/>
+                        <outlet property="jobDescriptionTextView" destination="YzS-uI-ugP" id="MTv-6Z-7q2"/>
+                        <outlet property="jobSalaryLabel" destination="uIs-Jw-tKf" id="CIO-7c-Dy5"/>
+                        <outlet property="jobTitleLabel" destination="z32-uc-Mz9" id="i1g-lQ-CEZ"/>
+                        <outlet property="jobTypeLabel" destination="bAv-aA-Col" id="VuI-7W-9Vo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NY5-qP-M5o" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

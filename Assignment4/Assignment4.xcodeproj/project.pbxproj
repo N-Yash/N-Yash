@@ -24,6 +24,8 @@
 		8B4B0F862DA4A59400C57AB7 /* JobCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B0F832DA4A59400C57AB7 /* JobCustomTableViewCell.swift */; };
 		8B4B0F892DA4B04700C57AB7 /* JobDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4B0F882DA4B04700C57AB7 /* JobDetailsViewController.xib */; };
 		8B4B0F8A2DA4B04700C57AB7 /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B0F872DA4B04700C57AB7 /* JobDetailsViewController.swift */; };
+		8B4B0F8D2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4B0F8C2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib */; };
+		8B4B0F8E2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B0F8B2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		8B4B0F842DA4A59400C57AB7 /* JobCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobCustomTableViewCell.xib; sourceTree = "<group>"; };
 		8B4B0F872DA4B04700C57AB7 /* JobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewController.swift; sourceTree = "<group>"; };
 		8B4B0F882DA4B04700C57AB7 /* JobDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailsViewController.xib; sourceTree = "<group>"; };
+		8B4B0F8B2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyCustomTableViewCell.swift; sourceTree = "<group>"; };
+		8B4B0F8C2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyCustomTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				8B4B0F842DA4A59400C57AB7 /* JobCustomTableViewCell.xib */,
 				8B4B0F872DA4B04700C57AB7 /* JobDetailsViewController.swift */,
 				8B4B0F882DA4B04700C57AB7 /* JobDetailsViewController.xib */,
+				8B4B0F8B2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift */,
+				8B4B0F8C2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib */,
 			);
 			path = Assignment4;
 			sourceTree = "<group>";
@@ -258,6 +264,7 @@
 				8B4B0F852DA4A59400C57AB7 /* JobCustomTableViewCell.xib in Resources */,
 				8B4B0F4F2DA455EF00C57AB7 /* Assets.xcassets in Resources */,
 				8B4B0F892DA4B04700C57AB7 /* JobDetailsViewController.xib in Resources */,
+				8B4B0F8D2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib in Resources */,
 				8B4B0F522DA455EF00C57AB7 /* Base in Resources */,
 				8B4B0F4A2DA455EE00C57AB7 /* Base in Resources */,
 			);
@@ -287,6 +294,7 @@
 				8B4B0F862DA4A59400C57AB7 /* JobCustomTableViewCell.swift in Sources */,
 				8B4B0F4D2DA455EE00C57AB7 /* Assignment4.xcdatamodeld in Sources */,
 				8B4B0F762DA4560B00C57AB7 /* NetworkManager.swift in Sources */,
+				8B4B0F8E2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift in Sources */,
 				8B4B0F782DA45A1E00C57AB7 /* JobsModel.swift in Sources */,
 				8B4B0F8A2DA4B04700C57AB7 /* JobDetailsViewController.swift in Sources */,
 				8B4B0F7C2DA4790E00C57AB7 /* SearchJobsViewController.swift in Sources */,
