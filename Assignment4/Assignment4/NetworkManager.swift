@@ -16,13 +16,13 @@ class NetworkManager {
     static var shared = NetworkManager()
     var jobsDelegate : JobsDelegate?
 
-    func fetchJobs() {
+    func fetchJobs(title : String, location : String, remote : String, type : String) {
         let headers = [
-            "x-rapidapi-key": "c992b5ce61msh855b85f5ecb80e2p1f26c2jsn7bb3562a47ae",
+            "x-rapidapi-key": "df5c70f1d0mshb96fe8e1f55fc13p1b0278jsndbcd7a910244",
             "x-rapidapi-host": "jobs-api14.p.rapidapi.com"
         ]
 
-        let request = NSMutableURLRequest(url: NSURL(string: "https://jobs-api14.p.rapidapi.com/v2/list?query=Web%20Developer&location=United%20States&autoTranslateLocation=true&remoteOnly=false&employmentTypes=fulltime%3Bparttime%3Bintern%3Bcontractor")! as URL,
+        let request = NSMutableURLRequest(url: NSURL(string: "https://jobs-api14.p.rapidapi.com/v2/list?query=\(title)&location=\(location)&autoTranslateLocation=true&remoteOnly=\(remote)&employmentTypes=\(type)")! as URL,
                                             cachePolicy: .useProtocolCachePolicy,
                                             timeoutInterval: 10.0)
         request.httpMethod = "GET"
