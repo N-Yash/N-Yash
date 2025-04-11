@@ -4,7 +4,6 @@
 //
 //  Created by Yash Vipul Naik on 2025-04-11.
 //
-
 import Foundation
 import UIKit
 
@@ -95,18 +94,20 @@ class NetworkManager {
         }.resume()
     }
 
-    func downloadImage(from urlString: String) {
+    func downloadImage(from urlString: String, completion: @escaping (UIImage?) -> Void) {
         guard let url = URL(string: urlString) else {
-            delegate?.imageDownloaded(nil, for: urlString)
+            completion(nil)
             return
         }
 
-        session.dataTask(with: url) { [weak self] data, _, error in
+        session.dataTask(with: url) { data, _, error in
             guard let data = data, error == nil, let image = UIImage(data: data) else {
-                self?.delegate?.imageDownloaded(nil, for: urlString)
+                completion(nil)
                 return
             }
-            self?.delegate?.imageDownloaded(image, for: urlString)
+            DispatchQueue.main.async {
+                completion(image)
+            }
         }.resume()
     }
 }

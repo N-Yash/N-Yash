@@ -19,6 +19,8 @@
 		8B7C13202DA986EA00FE973B /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C131F2DA986EA00FE973B /* NetworkManger.swift */; };
 		8B7C13222DA989DF00FE973B /* DrinkModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C13212DA989DF00FE973B /* DrinkModels.swift */; };
 		8B7C13242DA98D6800FE973B /* DrinkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C13232DA98D6800FE973B /* DrinkDetailsViewController.swift */; };
+		8B7C13272DA9925900FE973B /* DrinkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B7C13262DA9925900FE973B /* DrinkTableViewCell.xib */; };
+		8B7C13282DA9925900FE973B /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7C13252DA9925900FE973B /* DrinkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		8B7C131F2DA986EA00FE973B /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 		8B7C13212DA989DF00FE973B /* DrinkModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkModels.swift; sourceTree = "<group>"; };
 		8B7C13232DA98D6800FE973B /* DrinkDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailsViewController.swift; sourceTree = "<group>"; };
+		8B7C13252DA9925900FE973B /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
+		8B7C13262DA9925900FE973B /* DrinkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrinkTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				8B7C131F2DA986EA00FE973B /* NetworkManger.swift */,
 				8B7C13212DA989DF00FE973B /* DrinkModels.swift */,
 				8B7C13232DA98D6800FE973B /* DrinkDetailsViewController.swift */,
+				8B7C13252DA9925900FE973B /* DrinkTableViewCell.swift */,
+				8B7C13262DA9925900FE973B /* DrinkTableViewCell.xib */,
 			);
 			path = Test2;
 			sourceTree = "<group>";
@@ -242,6 +248,7 @@
 			files = (
 				8B7C12F92DA986BE00FE973B /* Assets.xcassets in Resources */,
 				8B7C12FC2DA986BE00FE973B /* Base in Resources */,
+				8B7C13272DA9925900FE973B /* DrinkTableViewCell.xib in Resources */,
 				8B7C12F72DA986BC00FE973B /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B7C13282DA9925900FE973B /* DrinkTableViewCell.swift in Sources */,
 				8B7C13242DA98D6800FE973B /* DrinkDetailsViewController.swift in Sources */,
 				8B7C13222DA989DF00FE973B /* DrinkModels.swift in Sources */,
 				8B7C12F42DA986BC00FE973B /* ViewController.swift in Sources */,

@@ -4,10 +4,6 @@
 //
 //  Created by Yash Vipul Naik on 2025-04-11.
 //
-
-//
-//  DrinkDetailsViewController.swift
-//
 import UIKit
 
 class DrinkDetailsViewController: UIViewController, NetworkManagerDelegate {
@@ -31,11 +27,7 @@ class DrinkDetailsViewController: UIViewController, NetworkManagerDelegate {
         NetworkManager.shared.fetchDrinkDetails(drinkId: drinkId)
     }
 
-    // MARK: - NetworkManagerDelegate
-
-    func drinksLoaded(_ drinks: [DrinkPreviewModel]) {
-        // Not used in this ViewController, but required by the protocol
-    }
+    func drinksLoaded(_ drinks: [DrinkPreviewModel]) {}
 
     func drinkDetailsLoaded(_ drink: DrinkDetailsModel) {
         drinkNameLabel.text = drink.strDrink
@@ -59,12 +51,9 @@ class DrinkDetailsViewController: UIViewController, NetworkManagerDelegate {
         }
     }
 
-    func imageDownloaded(_ image: UIImage?, for url: String) {
-        // Handled directly in drinkDetailsLoaded
-    }
+    func imageDownloaded(_ image: UIImage?, for url: String) {}
 
     func dataFetchFailed(with error: NetworkError) {
         print("Error fetching drink details: \(error)")
-        // Handle error (e.g., show an alert)
     }
 }

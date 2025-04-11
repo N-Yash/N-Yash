@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var alcoholicSwitch: UISwitch!
 
     var drinks: [DrinkPreviewModel] = []
+    var selectedDrinkId: String? // Store the selected drink ID
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,17 +29,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func loadDrinks(alcoholic: Bool) {
         NetworkManager.shared.fetchDrinks(alcoholic: alcoholic)
+        tableView.reloadData()
     }
-
-    // MARK: - NetworkManagerDelegate
 
     func drinksLoaded(_ drinks: [DrinkPreviewModel]) {
         self.drinks = drinks
+        print(self.drinks.count)
         tableView.reloadData()
     }
 
     func drinkDetailsLoaded(_ drinkDetails: DrinkDetailsModel) {
-        // Not used in this ViewController, but required by the protocol
+        tableView.reloadData()
     }
 
     func imageDownloaded(_ image: UIImage?, for url: String) {
@@ -47,34 +48,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     func dataFetchFailed(with error: NetworkError) {
         print("Error fetching data: \(error)")
-        // Handle error (e.g., show an alert)
     }
-
-    // MARK: - Table View Delegate & Data Source
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return drinks.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DrinkCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DrinkCell", for: indexPath) as? DrinkTableViewCell
         let drink = drinks[indexPath.row]
-        cell.textLabel?.text = drink.strDrink
+        print(drink.strDrink)
+        cell!.drinkNameLabel?.text = drink.strDrink
+        cell!.drinkImageView?.image = nil
 
         NetworkManager.shared.downloadImage(from: drink.strDrinkThumb) { image in
             DispatchQueue.main.async {
-                cell.imageView?.image = image
-                cell.setNeedsLayout()
+                cell!.drinkImageView?.image = image
+                cell?.setNeedsLayout()
             }
         }
-        return cell
+        return cell!
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedDrink = drinks[indexPath.row]
-        if let detailsVC = storyboard?.instantiateViewController(withIdentifier: "DrinkDetailsViewController") as? DrinkDetailsViewController {
-            detailsVC.drinkId = selectedDrink.idDrink
-            navigationController?.pushViewController(detailsVC, animated: true)
+        selectedDrinkId = drinks[indexPath.row].idDrink // Store the ID
+        performSegue(withIdentifier: "ShowDrinkDetails", sender: self) // Trigger the segue
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDrinkDetails",
+           let destinationVC = segue.destination as? DrinkDetailsViewController,
+           let drinkId = selectedDrinkId {
+            destinationVC.drinkId = drinkId
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
     }
 }
