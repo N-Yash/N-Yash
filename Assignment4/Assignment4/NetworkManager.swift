@@ -18,7 +18,7 @@ class NetworkManager {
 
     func fetchJobs(title : String, location : String, remote : String, type : String) {
         let headers = [
-            "x-rapidapi-key": "df5c70f1d0mshb96fe8e1f55fc13p1b0278jsndbcd7a910244",
+            "x-rapidapi-key": "86a2f3165amshbd732d9ae2172fep1646a8jsn32d3e20d76a4",
             "x-rapidapi-host": "jobs-api14.p.rapidapi.com"
         ]
 
