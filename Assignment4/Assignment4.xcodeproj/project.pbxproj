@@ -26,6 +26,7 @@
 		8B4B0F8A2DA4B04700C57AB7 /* JobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B0F872DA4B04700C57AB7 /* JobDetailsViewController.swift */; };
 		8B4B0F8D2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B4B0F8C2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib */; };
 		8B4B0F8E2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B4B0F8B2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift */; };
+		8BBAF9EE2DB476DF000540DB /* SearchJobTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBAF9ED2DB476DF000540DB /* SearchJobTableViewController.swift */; };
 		8BFAF24D2DB0253400DDFDC6 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BFAF24C2DB0253400DDFDC6 /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,7 @@
 		8B4B0F882DA4B04700C57AB7 /* JobDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailsViewController.xib; sourceTree = "<group>"; };
 		8B4B0F8B2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplyCustomTableViewCell.swift; sourceTree = "<group>"; };
 		8B4B0F8C2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ApplyCustomTableViewCell.xib; sourceTree = "<group>"; };
+		8BBAF9ED2DB476DF000540DB /* SearchJobTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchJobTableViewController.swift; sourceTree = "<group>"; };
 		8BFAF24C2DB0253400DDFDC6 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,6 +141,7 @@
 				8B4B0F8B2DA4B86000C57AB7 /* ApplyCustomTableViewCell.swift */,
 				8B4B0F8C2DA4B86000C57AB7 /* ApplyCustomTableViewCell.xib */,
 				8BFAF24C2DB0253400DDFDC6 /* CoreDataManager.swift */,
+				8BBAF9ED2DB476DF000540DB /* SearchJobTableViewController.swift */,
 			);
 			path = Assignment4;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				8B4B0F7C2DA4790E00C57AB7 /* SearchJobsViewController.swift in Sources */,
 				8B4B0F432DA455EE00C57AB7 /* AppDelegate.swift in Sources */,
 				8B4B0F7A2DA4647E00C57AB7 /* JobsTableViewController.swift in Sources */,
+				8BBAF9EE2DB476DF000540DB /* SearchJobTableViewController.swift in Sources */,
 				8B4B0F452DA455EE00C57AB7 /* SceneDelegate.swift in Sources */,
 				8BFAF24D2DB0253400DDFDC6 /* CoreDataManager.swift in Sources */,
 			);
