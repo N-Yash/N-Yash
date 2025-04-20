@@ -98,6 +98,10 @@ class SearchJobsViewController: UIViewController {
         let resString = chr.joined()
         return resString
     }
+    
+    @IBAction func savedJobsBtnClicked(_ sender: Any) {
+        
+    }
 
     func showAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -113,6 +117,9 @@ class SearchJobsViewController: UIViewController {
                 jobsTableVC.searchRemote = inputRemote
                 jobsTableVC.searchJobType = inputJobType
             }
+        }
+        if segue.identifier == "showSavedJobDetailsSegue"{
+            
         }
     }
 }

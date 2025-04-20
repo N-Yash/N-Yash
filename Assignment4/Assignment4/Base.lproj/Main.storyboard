@@ -272,7 +272,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Saved Jobs"/>
                                 <connections>
-                                    <segue destination="Fxd-ZH-lyn" kind="show" identifier="showSearchedJobsSegue" id="c9j-NE-BDj"/>
+                                    <action selector="savedJobsBtnClicked:" destination="Tcy-on-xSf" eventType="touchUpInside" id="fQR-Uw-AKH"/>
+                                    <segue destination="Fxd-ZH-lyn" kind="show" identifier="showSavedJobsSegue" id="c9j-NE-BDj"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -318,7 +319,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="141" id="qxH-C1-1TC">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobCell" rowHeight="141" id="qxH-C1-1TC" customClass="JobCustomTableViewCell" customModule="Assignment4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="141"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qxH-C1-1TC" id="X1J-ax-fPX">
@@ -356,7 +357,11 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="6gc-vn-ffB" kind="show" id="Ghf-la-VZt"/>
+                                    <outlet property="jobTitleLabel" destination="y36-8Y-n60" id="usO-Y1-CVs"/>
+                                    <outlet property="jobTypeLabel" destination="Ahk-FD-h72" id="IcY-fc-gn7"/>
+                                    <outlet property="locationLabel" destination="Ih8-ic-dYr" id="6aJ-0E-tKK"/>
+                                    <outlet property="salaryLabel" destination="8Kk-X5-Hbt" id="8q4-qU-M6X"/>
+                                    <segue destination="6gc-vn-ffB" kind="show" identifier="showSavedJobDetailsSegue" id="Ghf-la-VZt"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
